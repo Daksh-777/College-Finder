@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            color: #000000;
+            font-family: "Poppins", sans-serif; /* Applied Poppins font */
+            margin: 0;
+            padding: 0;
+            font-size: 14px; /* Smaller font size for body text */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            font-weight: 700;
+            color: #343a40;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 24px; /* Smaller font size for heading */
+        }
+
+        .table {
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 20px;
+            width: 90%;
+            border-collapse: collapse;
+            border: 1px solid #dee2e6; /* Add border around the table */
+        }
+
+        th, td {
+            vertical-align: middle;
+            color: #000000;
+            padding: 10px; /* Smaller padding for table cells */
+            border-bottom: 1px solid #dee2e6; /* Add border between rows */
+        }
+
+        th {
+            background-color: #e9ecef;
+            color: #000000;
+            text-align: left;
+            font-size: 14px; /* Smaller font size for table headers */
+        }
+
+        td>img {
+            width: 300px; /* Reduced width */
+            height: 200px; /* Reduced height */
+            object-fit: cover;
+            border: 2px solid #dee2e6;
+            border-radius: 5px;
+        }
+
+        select {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            border: 1px solid #ced4da;
+            font-size: 14px; /* Smaller font size for select dropdowns */
+        }
+
+        .btn-black {
+            background-color: #000000;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px; /* Smaller font size for button */
+        }
+
+        .btn-black:hover {
+            background-color: #343a40;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .mt-4 {
+            margin-top: 20px;
+        }
+
+        .bg-light {
+            background-color: #e9ecef;
+        }
+
+        /* Ensure responsive design */
+        @media (max-width: 768px) {
+            .table th, .table td {
+                display: block;
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            .table th {
+                text-align: center;
+            }
+
+            td>img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+    <title>Compare Colleges and Universities</title>
+</head>
+
+<body>
+<center>
+    <div class="container">
+        <h1>Compare Colleges and Universities</h1>
+        <table class="table">
+            <thead>
+                <tr class="bg-light">
+                    <th>Select Colleges</th>
+                    <th width="250px">
+                        <select id="select1" onchange="item1(this.value)">
+                            <option value="0">-- Select a College --</option>
+                        </select>
+                    </th>
+                    <th width="250px">
+                        <select id="select2" onchange="item2(this.value)">
+                            <option value="0">-- Select a College --</option>
+                        </select>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th></th>
+                    <td>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png" id="img1" alt="No Image">
+                    </td>
+                    <td>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png" id="img2" alt="No Image">
+                    </td>
+                </tr>
+                <tr>
+                    <tr>
+                        <th>Private/Public</th>
+                        <td id="p1">N/A</td>
+                        <td id="p2">N/A</td>
+                    </tr>
+                    <tr>
+                        <th>Location</th>
+                        <td id="l1">N/A</td>
+                        <td id="l2">N/A</td>
+                    </tr>
+                    <th>QS World University Ranking</th>
+                    <td id="qs1">N/A</td>
+                    <td id="qs2">N/A</td>
+                </tr>
+                <tr>
+                    <th>Acceptance Rate</th>
+                    <td id="ar1">N/A</td>
+                    <td id="ar2">N/A</td>
+                </tr>
+                <tr>
+                    <th>Tuition Fee</th>
+                    <td id="price1">N/A</td>
+                    <td id="price2">N/A</td>
+                </tr>
+                <tr>
+                    <th>Cost of Attendance (With Room and Board)</th>
+                    <td id="tprice1">N/A</td>
+                    <td id="tprice2">N/A</td>
+                </tr>
+                <tr>
+                    <th>On Campus Living</th>
+                    <td id="ocl1">N/A</td>
+                    <td id="ocl2">N/A</td>
+                </tr>
+                <tr>
+                    <th>Regular Admission Deadline</th>
+                    <td id="rad1">N/A</td>
+                    <td id="rad2">N/A</td>
+                </tr>
+                <tr>
+                    <th>Early Action</th>
+                    <td id="ea1">N/A</td>
+                    <td id="ea2">N/A</td>
+                </tr>
+                <tr>
+                    <th>Early Decision</th>
+                    <td id="ed1">N/A</td>
+                    <td id="ed2">N/A</td>
+                </tr>
+                <tr>
+                    <th>Average GPA</th>
+                    <td id="gpa1">N/A</td>
+                    <td id="gpa2">N/A</td>
+                </tr>
+                <tr>
+                    <th>STA Math</th>
+                    <td id="satm1">N/A</td>
+                    <td id="satm2">N/A</td>
+                </tr>
+                <tr>
+                    <th>STA EBRW</th>
+                    <td id="satebrw1">N/A</td>
+                    <td id="satebrw2">N/A</td>
+                </tr>
+                <tr>
+                    <th>ACT Composite</th>
+                    <td id="act1">N/A</td>
+                    <td id="act2">N/A</td>
+                </tr>
+                <tr>
+                    <th>% of International Students</th>
+                    <td id="is1">N/A</td>
+                    <td id="is2">N/A</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="text-center mt-4">
+            <p>Are your selected colleges not meeting your expectations? <br> <br><a href="browse.html" class="btn-black">Click here to explore</a></p>
+        </div>
+    </div>
+</center>
+    <script src="data.js"></script>
+    <script src="compare.js"></script>
+</body>
+
+</html>

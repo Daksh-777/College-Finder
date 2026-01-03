@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Filter And Search</title>
+    <!-- Google Font -->
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="browse.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div id="search-container">
+        <input
+          type="search"
+          id="search-input"
+          placeholder="Enter College Name/ City/ Country..."
+        />
+        <button id="search">Search</button>
+        <a href="compare.html">
+          <button>Compare</button>
+        </a>
+      </div>
+      <div id="buttons">
+        <button class="button-value" onclick="filterProduct('all')">All</button>
+        <button class="button-value" onclick="filterProduct('California')">California</button>
+        <button class="button-value" onclick="filterProduct('Connecticut')">Connecticut</button>
+        <button class="button-value" onclick="filterProduct('Florida')">Florida</button>
+        <button class="button-value" onclick="filterProduct('Illinois')">Illinois</button>
+        <button class="button-value" onclick="filterProduct('Maryland')">Maryland</button>
+        <button class="button-value" onclick="filterProduct('Massachusetts')">Massachusetts</button>
+        <button class="button-value" onclick="filterProduct('Michigan')">Michigan</button>
+        <button class="button-value" onclick="filterProduct('NewJersey')">New Jersey</button>
+        <button class="button-value" onclick="filterProduct('NewYork')">New York</button>
+        <button class="button-value" onclick="filterProduct('NorthCarolina')">North Carolina</button>
+        <button class="button-value" onclick="filterProduct('Pennsylvania')">Pennsylvania</button>
+        <button class="button-value" onclick="filterProduct('Texas')">Texas</button>
+      
+        <!-- Add more buttons for other states as needed -->
+      </div>
+      <div id="products"></div>
+    </div>
+    <!-- Script -->
+    <script src="browse.js"></script>
+  </body>
+</html>
